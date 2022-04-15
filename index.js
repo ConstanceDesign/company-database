@@ -235,63 +235,63 @@ function addEmployee() {
   });
 }
 
-// function updateEmployee() {
-//   connection.query(
-//     "SELECT first_name, last_name FROM employee",
-//     function (err, res) {
-//       if (err) throw err;
-//       inquirer
-//         .prompt([
-//           {
-//             name: "employees",
-//             type: "list",
-//             choices: function () {
-//               var employeeArray = [];
-//               for (let i = 0; i < res.length; i++) {
-//                 employeeArray.push(res[i].title);
-//               }
-//               return employeeArray;
-//             },
-//             message: "Select employee to update role:",
-//           },
-//           {
-//             name: "role",
-//             type: "list",
-//             choices: function () {
-//               var roleArray = [];
-//               for (let i = 0; i < res.length; i++) {
-//                 roleArray.push(res[i].title);
-//               }
-//               return roleArray;
-//             },
-//             message: "Select the employee's new role:",
-//           },
-//         ])
-//         .then(function (user) {
-//           let role_id;
-//           for (let a = 0; a < res.length; a++) {
-//             if (res[a].title == user.role) {
-//               role_id = res[a].id;
-//               console.log(role_id);
-//             }
-//           }
-//           connection.query(
-//             "INSERT INTO employee SET ?",
-//             {
-//               first_name: user.first_name,
-//               last_name: user.last_name,
-//               role_id: role_id,
-//             },
-//             function (err) {
-//               if (err) throw err;
-//               console.log("Success! This employee has a new role.");
-//               userPrompt();
-//             }
-//           );
-//         });
-//     }
-//   );
-// }
+function updateEmployee() {
+  connection.query(
+    "SELECT first_name, last_name FROM employee",
+    function (err, res) {
+      if (err) throw err;
+      inquirer
+        .prompt([
+          {
+            name: "employees",
+            type: "list",
+            choices: function () {
+              var employeeArray = [];
+              for (let i = 0; i < res.length; i++) {
+                employeeArray.push(res[i].title);
+              }
+              return employeeArray;
+            },
+            message: "Select employee to update role:",
+          },
+          {
+            name: "role",
+            type: "list",
+            choices: function () {
+              var roleArray = [];
+              for (let i = 0; i < res.length; i++) {
+                roleArray.push(res[i].title);
+              }
+              return roleArray;
+            },
+            message: "Select the employee's new role:",
+          },
+        ])
+        .then(function (user) {
+          let role_id;
+          for (let a = 0; a < res.length; a++) {
+            if (res[a].title == user.role) {
+              role_id = res[a].id;
+              console.log(role_id);
+            }
+          }
+          connection.query(
+            "INSERT INTO employee SET ?",
+            {
+              first_name: user.first_name,
+              last_name: user.last_name,
+              role_id: role_id,
+            },
+            function (err) {
+              if (err) throw err;
+              console.log("Success! This employee has a new role.");
+              userPrompt();
+            }
+          );
+        });
+    }
+  );
+}
 
 function exitApp() {
   connection.end();
