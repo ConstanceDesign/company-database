@@ -1,4 +1,4 @@
-# company-database
+# employee-tracker
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
