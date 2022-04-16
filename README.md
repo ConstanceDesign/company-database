@@ -23,14 +23,14 @@ Completed
 
 A commandline app to manage a company's database. When the application is started, users can select from the following menu options and follow the prompts to create new and updated data:
 
-VIEW all departments
-VIEW all roles
-VIEW all employees
-ADD a department
-ADD a role
-ADD a employee
-UPDATE an employee role
-EXIT
+- `VIEW all departments`
+- `VIEW all roles`
+- `VIEW all employees`
+- `ADD a department`
+- `ADD a role`
+- `ADD a employee`
+- `UPDATE an employee role`
+- `EXIT`
 
 ## Usage
 
