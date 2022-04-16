@@ -1,5 +1,5 @@
 {
-  "name": "employee-tracker",
+  "name": "company-database",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SnugglesMcGee/employee-tracker.git"
+    "url": "git+https://github.com/SnugglesMcGee/company-database.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SnugglesMcGee/employee-tracker/issues"
+    "url": "https://github.com/SnugglesMcGee/company-database/issues"
   },
-  "homepage": "https://github.com/SnugglesMcGee/employee-tracker#readme",
+  "homepage": "https://github.com/SnugglesMcGee/company-database#readme",
   "dependencies": {
     "console.table": "^0.10.0",
     "dotenv": "^16.0.0",
