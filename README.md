@@ -54,7 +54,7 @@ To run tests, get the source code and clone at [GitHub/SnugglesMcGee](https://gi
 
 ## Visuals
 
-Coming soon!
+https://user-images.githubusercontent.com/93297081/163687459-322d4fe9-7bb3-4248-ae59-373ac92b6734.mp4
 
 ## GitHub Link
 
